@@ -21,13 +21,16 @@ public class Revenue {
         price = input.nextDouble();   // Java asks user to put input/info/value then assign that value to price variable
         quantity = input.nextInt();  //Java asks user to put input/info/value then assign that value to quantity variable
 
+
+        System.out.println();
         double revenue = price * quantity;
         System.out.println("Your revenue : "  +revenue);
 
 
-        System.out.println();
-        System.out.println(price);
-        System.out.println(quantity);   //hard coded still here. I have to come back to double price = 10.99; and change.. so now I want it to be dynamic.
+
+        //System.out.println();
+        //System.out.println(price);
+        //System.out.println(quantity);   //hard coded still here. I have to come back to double price = 10.99; and change.. so now I want it to be dynamic.
 
 
 
