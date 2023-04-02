@@ -43,7 +43,7 @@ public class DaysInWeek {
                 System.out.println("It is Weekend");
                 break;
             default:
-                System.out.println(dayNumber + "is invalid");
+                System.out.println(dayNumber + " is invalid");
 
 
         }
