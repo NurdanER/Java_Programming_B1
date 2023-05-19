@@ -7,7 +7,7 @@ import java.util.*;
 public class AllMapObjects {
     public static void main(String[] args) {
 
-        Map<String, String> map = new HashMap<>();  //Order not guaranteed | null as key is OK
+        Map<String, String> map = new HashMap<>();  //Order not guaranteed | null as key and value is OK
         map.put("James", "Java");
         map.put("Tom", "Cartoon");
         map.put("Bond", "Movie");
@@ -18,8 +18,10 @@ public class AllMapObjects {
 
         // map.put("Bond", "Theater");
         // System.out.println(map);
+        System.out.println("======================================================");
+        System.out.println();
 
-        Map<String, String> linked = new LinkedHashMap<>();       //Maintains the Insertion Order | null as key is OK
+        Map<String, String> linked = new LinkedHashMap<>();       //Maintains the Insertion Order |  null as key and value is OK
 
         linked.put("James", "Java");
         linked.put("Tom", "Cartoon");
@@ -27,27 +29,38 @@ public class AllMapObjects {
         linked.put("Nadir", "Automation");
         linked.put(null, "test");
         linked.put("check", null);
+        System.out.println(linked);
+
+        System.out.println("======================================================");
+        System.out.println();
 
         Map<String, String> treeMap = new TreeMap<>();  //Maintains the SORTER - Order goes by sorted | null as key is NOT OK.
         treeMap.put("James", "Java");
         treeMap.put("Tom", "Cartoon");
         treeMap.put("Bond", "Movie");
         treeMap.put("Nadir", "Automation");
-        // treeMap.put(null, "test");        ======>NullPointEWxception<=====================
-        treeMap.put("check", null);
+        // treeMap.put(null, "test");        ======>NullPointException<=====================
+        treeMap.put("Check", null);
         System.out.println(treeMap);
 
+        System.out.println("=========================================================");
         System.out.println();
+
+
         Map<String, String> tableMap = new Hashtable<>(); // Order is NOT guaranteed | null as key or as value is NOT OK
         //thread safe- we cannot reach the same element at the same time.
+
         tableMap.put("James", "Java");
         tableMap.put("Tom", "Cartoon");
         tableMap.put("Bond", "Movie");
         tableMap.put("Nadir", "Automation");
-        // treeMap.put(null, "test");
-        // tableMap.put("check", null);
+        // treeMap.put(null, "test");           // =============>NullPointException<=====================
+        //tableMap.put("check", null);          // =============>NullPointException<=====================
         System.out.println(tableMap);
 
+
+        System.out.println("======================================");
+        System.out.println();
 
         System.out.println("=******METHODS=************");
         System.out.println(map.get("James"));
